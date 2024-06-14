@@ -1,18 +1,21 @@
 import { Link } from 'react-router-dom';
+import './Nav.scss';
 
 function Nav() {
-  const style = {
-    display: 'flex',
-  };
-
   return (
     <nav>
-      <ul style={style}>
+      <ul>
         <li>
-          <Link to='/'>Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to={'test'}>Test</Link>
+          <Link to="about">About</Link>
+        </li>
+        <li>
+          <Link to="experience">Experience</Link>
+        </li>
+        <li>
+          <Link to="projects">Projects</Link>
         </li>
       </ul>
     </nav>

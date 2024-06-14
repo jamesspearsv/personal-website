@@ -1,0 +1,19 @@
+nav {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--color-light);
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+
+    a {
+      color: white;
+    }
+
+    a.active {
+      color: var(--color-);
+    }
+  }
+}
