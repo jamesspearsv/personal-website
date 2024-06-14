@@ -4,7 +4,10 @@ const routes = [
   {
     path: '/',
     element: <App />,
-    children: [{ path: 'test', element: <h1>Test page</h1> }],
+    children: [
+      { index: true, element: <h1>Home page</h1> },
+      { path: 'test', element: <h1>Test page</h1> },
+    ],
   },
 ];
 
