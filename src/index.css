@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --color-dark: #414141;
+  --color-light: #f4f4f4;
+  --color-orange: #f18805;
+  --color-blue: #4484ce;
+  --font-heading: 'Overpass', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-size: 18px;
+  font-weight: 200;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 2rem;
+}
