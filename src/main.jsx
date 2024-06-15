@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import 'normalize.css';
-import './index.css';
+import './index.scss';
 import routes from './routes';
 
 const router = createBrowserRouter(routes);

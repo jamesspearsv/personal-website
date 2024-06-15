@@ -1,25 +1,43 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './Nav.scss';
+import darkIcon from '../assets/dark-icon.svg';
+import lightIcon from '../assets/light-icon.svg';
 
-function Nav() {
+function Nav({ isDarkTheme, setIsDarkTheme }) {
   return (
-    <nav>
+    <nav data-theme={isDarkTheme ? 'dark' : 'light'}>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to='/'>Home</NavLink>
         </li>
         <li>
-          <Link to="about">About</Link>
+          <NavLink to='about'>About</NavLink>
         </li>
         <li>
-          <Link to="experience">Experience</Link>
+          <NavLink to='experience'>Experience</NavLink>
         </li>
         <li>
-          <Link to="projects">Projects</Link>
+          <NavLink to='projects'>Projects</NavLink>
         </li>
       </ul>
+      <div>
+        <button
+          className='theme-toggler'
+          onClick={() => {
+            setIsDarkTheme((isDarkTheme) => !isDarkTheme);
+          }}
+        >
+          <img src={isDarkTheme ? darkIcon : lightIcon} alt='' srcset='' />
+        </button>
+      </div>
     </nav>
   );
 }
+
+Nav.propTypes = {
+  isDarkTheme: PropTypes.bool.isRequired,
+  setIsDarkTheme: PropTypes.func.isRequired,
+};
 
 export default Nav;
