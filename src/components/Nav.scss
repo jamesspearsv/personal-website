@@ -1,11 +1,21 @@
 @import '../global.scss';
 
 nav {
-  padding: 0.5rem 1.5rem;
+  // padding: 0.5rem 1.5rem;
+  height: 10dvh;
   border-bottom: 1px solid $color-dark;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+  }
 
   ul {
     display: flex;
@@ -26,12 +36,10 @@ nav {
   }
 
   .theme-toggler {
-    background-color: $color-orange;
-    border: solid 1px;
-    border-color: $color-dark;
+    background-color: $color-dark;
+    border: none;
     border-radius: 5px;
     padding: 0.5rem;
-    aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,19 +47,100 @@ nav {
   }
 }
 
-nav[data-theme='dark'] {
-  border-bottom: 2px solid $color-light;
+// Dark theme styles
+[data-theme='dark'] {
+  nav {
+    border-bottom: 2px solid $color-light;
 
-  a {
-    color: $color-light;
+    a {
+      color: $color-light;
+    }
+
+    a.active {
+      color: $color-blue;
+    }
+
+    .theme-toggler {
+      background-color: $color-light;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: 65px;
+
+    .mobile-menu {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+
+      p {
+        font-weight: 400;
+      }
+
+      button {
+        background-color: $color-dark;
+        color: $color-light;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button svg {
+        transition: transform 500ms ease-in-out;
+      }
+
+      button.open svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    .menu-container {
+      position: absolute;
+      background-color: $color-light;
+      padding: 0;
+      width: 100dvw;
+      transition: height 500ms ease-in-out;
+
+      flex-direction: column;
+      justify-content: start;
+
+      ul {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .menu-container.closed {
+      overflow: hidden;
+      height: 0px;
+    }
+
+    .theme-toggler {
+      padding: 0.5rem 2rem;
+    }
   }
 
-  a.active {
-    color: $color-blue;
-  }
+  //  Mobile dark theme styles
+  [data-theme='dark'] {
+    .mobile-menu {
+      button {
+        background-color: $color-light;
+        color: $color-dark;
+      }
+    }
 
-  .theme-toggler {
-    background-color: $color-blue;
-    border-color: $color-light;
+    .menu-container {
+      background-color: $color-dark;
+    }
   }
 }

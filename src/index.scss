@@ -7,6 +7,7 @@ body {
   font-weight: 300;
   background-color: $color-light;
   color: $color-dark;
+  // transition: background-color 500ms ease-in-out;
 }
 
 body:has([data-theme='dark']) {
