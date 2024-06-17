@@ -12,7 +12,7 @@ function Home() {
         <button className="button about-cta">About Me</button>
       </Link>
       <hr className="divider" />
-      <h2>Connect with me</h2>
+      <h2>Connect with me online</h2>
       <div className="connect-links">
         <a href="https://github.com/jamesspearsv" target="_blank">
           {GitHub}
