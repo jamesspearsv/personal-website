@@ -2,7 +2,6 @@
 
 nav {
   // padding: 0.5rem 1.5rem;
-  height: 10dvh;
   border-bottom: 1px solid $color-dark;
 
   .mobile-menu {
@@ -15,23 +14,17 @@ nav {
     align-items: center;
     height: 100%;
     padding: 0 1rem;
-  }
 
-  ul {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    gap: 1.5rem;
-    list-style: none;
+    ul {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      gap: 1.5rem;
+      list-style: none;
 
-    a {
-      color: $color-dark;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    a.active {
-      color: $color-orange;
+      a.active {
+        color: $color-orange;
+      }
     }
   }
 
@@ -52,16 +45,10 @@ nav {
   nav {
     border-bottom: 2px solid $color-light;
 
-    a {
-      color: $color-light;
-    }
-
-    a.active {
-      color: $color-blue;
-    }
-
-    .theme-toggler {
-      background-color: $color-light;
+    .menu-container {
+      .theme-toggler {
+        background-color: $color-light;
+      }
     }
   }
 }
@@ -112,17 +99,23 @@ nav {
       flex-direction: column;
       justify-content: start;
 
-      ul {
-        display: flex;
+      ul,
+      .theme-toggler {
         width: 100%;
         flex-direction: column;
         align-items: center;
+        transition: opacity 500ms ease-in-out;
       }
     }
 
     .menu-container.closed {
       overflow: hidden;
       height: 0px;
+
+      ul,
+      .theme-toggler {
+        opacity: 0;
+      }
     }
 
     .theme-toggler {

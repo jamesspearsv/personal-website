@@ -7,7 +7,6 @@ function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(() => {
     const saved = localStorage.getItem('isDarkTheme');
     const initialValue = JSON.parse(saved);
-    console.log(initialValue);
     return initialValue || false;
   });
 
@@ -16,7 +15,7 @@ function App() {
   }, [isDarkTheme]);
 
   return (
-    <div id='app' data-theme={isDarkTheme ? 'dark' : 'light'}>
+    <div id="app" data-theme={isDarkTheme ? 'dark' : 'light'}>
       <Nav isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
       <main>
         <Outlet />

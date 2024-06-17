@@ -1,14 +1,16 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Nav.scss';
 import darkIcon from '../assets/dark-icon.svg';
 import lightIcon from '../assets/light-icon.svg';
+import { Chevron } from '../assets/chevron';
 import { useState } from 'react';
 
 function Nav({ isDarkTheme, setIsDarkTheme }) {
   const [navClosed, setNavClosed] = useState(true);
 
-  const menuHeight = screen.height - 65;
+  const navHeight = 65;
+  const menuHeight = window.innerHeight - navHeight;
 
   function closeNav() {
     setNavClosed(true);
@@ -23,28 +25,16 @@ function Nav({ isDarkTheme, setIsDarkTheme }) {
   ];
 
   return (
-    <nav>
-      <div className='mobile-menu'>
-        <p>Menu</p>
+    <nav style={{ height: `${navHeight}px` }}>
+      <div className="mobile-menu">
+        <Link to="/">James Spears, V</Link>
         <button
           className={navClosed ? 'closed' : 'open'}
           onClick={() => {
             setNavClosed((navClosed) => !navClosed);
           }}
         >
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='16'
-            height='16'
-            fill='currentColor'
-            class='bi bi-chevron-down'
-            viewBox='0 0 16 16'
-          >
-            <path
-              fill-rule='evenodd'
-              d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'
-            />
-          </svg>
+          {Chevron}
         </button>
       </div>
       <div
@@ -62,12 +52,12 @@ function Nav({ isDarkTheme, setIsDarkTheme }) {
         </ul>
         <div>
           <button
-            className='theme-toggler'
+            className="theme-toggler"
             onClick={() => {
               setIsDarkTheme((isDarkTheme) => !isDarkTheme);
             }}
           >
-            <img src={isDarkTheme ? lightIcon : darkIcon} alt='' srcset='' />
+            <img src={isDarkTheme ? lightIcon : darkIcon} alt="" srcset="" />
           </button>
         </div>
       </div>
