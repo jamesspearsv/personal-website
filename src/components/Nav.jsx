@@ -26,8 +26,10 @@ function Nav({ isDarkTheme, setIsDarkTheme }) {
 
   return (
     <nav style={{ height: `${navHeight}px` }}>
-      <div className="mobile-menu">
-        <Link to="/">James Spears, V</Link>
+      <div className='mobile-menu'>
+        <Link to='/' onClick={closeNav}>
+          James Spears, V
+        </Link>
         <button
           className={navClosed ? 'closed' : 'open'}
           onClick={() => {
@@ -52,12 +54,12 @@ function Nav({ isDarkTheme, setIsDarkTheme }) {
         </ul>
         <div>
           <button
-            className="theme-toggler"
+            className='theme-toggler'
             onClick={() => {
               setIsDarkTheme((isDarkTheme) => !isDarkTheme);
             }}
           >
-            <img src={isDarkTheme ? lightIcon : darkIcon} alt="" srcset="" />
+            <img src={isDarkTheme ? lightIcon : darkIcon} alt='' srcset='' />
           </button>
         </div>
       </div>
