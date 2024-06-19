@@ -1,0 +1,45 @@
+@import '../global.scss';
+
+.bio-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+
+  div {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-orange;
+    height: fit-content;
+    padding: 1rem;
+    border-radius: 200px;
+
+    .headshot {
+      width: 100%;
+      height: auto;
+      border-radius: 200px;
+    }
+  }
+
+  .bio {
+    line-height: 1.5;
+    text-align: justify;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bio-container {
+    flex-direction: column;
+
+    div {
+      width: 50%;
+    }
+
+    .bio {
+      width: 90%;
+    }
+  }
+}

@@ -1,8 +1,6 @@
 @import '../global.scss';
 
 .home-container {
-  max-width: 1100px;
-  margin: auto;
   text-align: center;
 }
 
@@ -36,11 +34,5 @@
 
   svg:hover {
     color: $color-blue;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .home-container {
-    width: 95%;
   }
 }
