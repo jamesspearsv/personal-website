@@ -1,8 +1,10 @@
 @import '../global.scss';
 
 nav {
-  // padding: 0.5rem 1.5rem;
+  background-color: $color-light;
   border-bottom: 1px solid $color-dark;
+  position: sticky;
+  top: 0;
 
   .mobile-menu {
     display: none;
@@ -41,7 +43,7 @@ nav {
 }
 
 // Dark theme styles
-[data-theme='dark'] {
+#app[data-theme='dark'] {
   nav {
     border-bottom: 2px solid $color-light;
 
@@ -124,16 +126,24 @@ nav {
   }
 
   //  Mobile dark theme styles
-  [data-theme='dark'] {
-    .mobile-menu {
-      button {
-        background-color: $color-light;
-        color: $color-dark;
+  #app[data-theme='dark'] {
+    nav {
+      .mobile-menu {
+        button {
+          background-color: $color-light;
+          color: $color-dark;
+        }
+      }
+
+      .menu-container {
+        background-color: $color-dark;
       }
     }
+  }
+}
 
-    .menu-container {
-      background-color: $color-dark;
-    }
+#app[data-theme='dark'] {
+  nav {
+    background-color: $color-dark;
   }
 }

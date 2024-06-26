@@ -47,7 +47,7 @@ a {
 }
 
 // Global dark theme styles
-body:has([data-theme='dark']) {
+body:has(#app[data-theme='dark']) {
   background-color: $color-dark;
   color: $color-light;
 }

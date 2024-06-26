@@ -1,0 +1,14 @@
+.experience-container {
+  section {
+    width: 70%;
+
+    h2 {
+      cursor: pointer;
+    }
+  }
+
+  .inactive > div {
+    height: 0;
+    overflow: hidden;
+  }
+}

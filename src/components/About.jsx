@@ -12,6 +12,7 @@ function About() {
         />
       </div>
       <section className='bio'>
+        <h1>All About Me!</h1>
         <p>
           Hi! I&apos;m a public librarian, hobbist web developer, and full-time
           cat lover. Born and raised in East Tennessee, I currently live in wild
@@ -34,9 +35,9 @@ function About() {
           classes at home and have completed several at-home computer science
           courses including Harvard&apos;s CS50 (and the numerous CS50 variants)
           and The Odin Project. I try my best to meld my library work and
-          computer science whenever possible. I have taught myself Javascript,
-          React, Linux, Pyton, and Docker among other topics. Although I am
-          still a constant and life-long learner.
+          computer science whenever possible. I have taught myself (at least
+          some) Javascript, React, Linux, Pyton, and Docker among other topics.
+          Although I am still constantly learning new things everyday.
         </p>
       </section>
     </div>
