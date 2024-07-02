@@ -13,6 +13,7 @@ function About() {
       </div>
       <section className='bio'>
         <h1>All About Me!</h1>
+        <hr className='divider' />
         <p>
           Hi! I&apos;m a public librarian, hobbist web developer, and full-time
           cat lover. Born and raised in East Tennessee, I currently live in wild

@@ -6,9 +6,6 @@
   gap: 0.5rem;
   padding: 1.5rem;
 
-  border: solid 1px $color-dark;
-  border-radius: 15px;
-
   .title {
     margin: 0;
     padding: 0;
@@ -20,11 +17,5 @@
 
   .content {
     margin: 0;
-  }
-}
-
-#app[data-theme='dark'] {
-  .card {
-    border-color: $color-light;
   }
 }

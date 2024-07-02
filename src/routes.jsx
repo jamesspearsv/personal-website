@@ -11,7 +11,7 @@ const routes = [
       { index: true, element: <Home /> },
       { path: 'about', element: <About /> },
       { path: 'experience', element: <Experience /> },
-      { path: 'projects', element: 'todo -- projects' },
+      { path: 'projects', element: 'Coming soon!' },
     ],
   },
 ];

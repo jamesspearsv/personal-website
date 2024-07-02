@@ -30,7 +30,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mobile-break) {
   .bio-container {
     flex-direction: column;
 

@@ -1,14 +1,21 @@
-.experience-container {
-  section {
-    width: 70%;
+@import '../global.scss';
 
-    h2 {
-      cursor: pointer;
-    }
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+
+  h1 {
+    text-align: center;
+    margin: 0;
   }
 
-  .inactive > div {
-    height: 0;
-    overflow: hidden;
+  button {
+    transition: transform 300ms ease-in-out;
+  }
+
+  button:hover {
+    transform: scale(1.1);
   }
 }

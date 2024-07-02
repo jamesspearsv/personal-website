@@ -5,6 +5,7 @@ nav {
   border-bottom: 1px solid $color-dark;
   position: sticky;
   top: 0;
+  z-index: 1000;
 
   .mobile-menu {
     display: none;
@@ -55,7 +56,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mobile-break) {
   nav {
     flex-direction: column;
     height: 65px;

@@ -1,0 +1,59 @@
+@import '../global.scss';
+
+.section {
+  width: 60%;
+  border: solid 1px $color-dark;
+  border-radius: 10px;
+
+  .section-header {
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .section-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  svg {
+    transition: transform 300ms ease-in-out;
+  }
+}
+
+.section.inactive {
+  .section-content {
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+.section.active {
+  .section-header {
+    border-bottom: solid 1px $color-dark;
+  }
+
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
+#app[data-theme='dark'] {
+  .section {
+    border-color: $color-light;
+  }
+
+  .section.active {
+    .section-header {
+      border-bottom: solid 1px $color-light;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-break) {
+  .section {
+    width: 90%;
+  }
+}
