@@ -1,24 +1,21 @@
 import PropTypes from 'prop-types';
 import './ExperienceCard.scss';
 
-function ExperienceCard({ title, subtitle, dates, content }) {
+function ExperienceCard({ entry }) {
   return (
     <div className='card'>
-      <h3 className='title'>{title}</h3>
-      <div className='dates'>{dates}</div>
+      <h3 className='title'>{entry.title}</h3>
       <hr className='divider' />
-      <div className='subtitle'>{subtitle}</div>
+      <div className='dates'>{entry.dates}</div>
+      <div className='subtitle'>{entry.subtitle}</div>
 
-      {content && <p className='content'>{content}</p>}
+      {entry.content && <p className='content'>{entry.content}</p>}
     </div>
   );
 }
 
 ExperienceCard.propTypes = {
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
-  dates: PropTypes.string,
-  content: PropTypes.string,
+  entry: PropTypes.object,
 };
 
 export default ExperienceCard;

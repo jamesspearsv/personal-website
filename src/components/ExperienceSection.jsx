@@ -27,13 +27,7 @@ function ExperienceSection({
       </div>
       <div className='section-content'>
         {section.map((entry, index) => (
-          <ExperienceCard
-            key={index}
-            title={entry.title}
-            subtitle={entry.subtile}
-            dates={entry.dates}
-            content={entry.content}
-          />
+          <ExperienceCard key={index} entry={entry} />
         ))}
       </div>
     </section>

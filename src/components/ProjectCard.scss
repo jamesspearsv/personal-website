@@ -1,0 +1,57 @@
+@import '../global.scss';
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: solid $color-dark 1px;
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-width: 300px;
+  box-shadow: 3px 3px;
+
+  .project-heading {
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+      color: $color-orange;
+    }
+  }
+
+  hr {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .project-tags {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .link-button {
+    text-align: center;
+  }
+
+  .link-button:hover {
+    text-decoration: underline;
+  }
+}
+
+#app[data-theme='dark'] {
+  .project {
+    border-color: $color-light;
+
+    .link:hover {
+      text-decoration: underline;
+      color: $color-blue;
+    }
+  }
+}

@@ -26,8 +26,8 @@ function Nav({ isDarkTheme, setIsDarkTheme }) {
 
   return (
     <nav style={{ height: `${navHeight}px` }}>
-      <div className="mobile-menu">
-        <Link className="mobile-heading" to="/" onClick={closeNav}>
+      <div className='mobile-menu'>
+        <Link className='mobile-heading' to='/' onClick={closeNav}>
           James Spears, V
         </Link>
         <button
@@ -43,7 +43,7 @@ function Nav({ isDarkTheme, setIsDarkTheme }) {
         className={'menu-container ' + (navClosed ? 'closed' : 'open')}
         style={{ height: navClosed ? '' : menuHeight + 'px' }}
       >
-        <div className="nav-heading">James Spears, V</div>
+        <Link className='nav-heading'>James Spears, V</Link>
         <ul>
           {navItems.map((item, index) => (
             <li key={index}>
@@ -55,12 +55,12 @@ function Nav({ isDarkTheme, setIsDarkTheme }) {
         </ul>
         <div>
           <button
-            className="theme-toggler"
+            className='theme-toggler'
             onClick={() => {
               setIsDarkTheme((isDarkTheme) => !isDarkTheme);
             }}
           >
-            <img src={isDarkTheme ? lightIcon : darkIcon} alt="" srcset="" />
+            <img src={isDarkTheme ? lightIcon : darkIcon} alt='' srcset='' />
           </button>
         </div>
       </div>
