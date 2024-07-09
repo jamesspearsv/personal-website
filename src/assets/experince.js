@@ -3,16 +3,19 @@ export const education = [
     title: 'The University of Tennessee, Knoxville',
     subtile: 'Master of Science in Information Sciences',
     dates: 'August 2020 - August 2022',
+    content: 'Master of Science in Information Sciences',
   },
   {
     title: 'The University of Tennessee, Knoxville',
     subtile: 'Bachelor of Arts in History',
     dates: 'August 2018 - August 2020',
+    content: 'Bachelor of Arts in History',
   },
   {
     title: 'Tusculum University',
     subtile: 'Major in History',
     dates: 'August 2015 - May 2018',
+    content: 'Major in History',
   },
 ];
 
