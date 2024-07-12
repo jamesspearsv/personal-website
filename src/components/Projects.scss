@@ -1,6 +1,10 @@
 @import '../global.scss';
 
 .projects-container {
+  h1 {
+    text-align: center;
+  }
+
   .tag-list {
     display: flex;
     justify-content: center;

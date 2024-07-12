@@ -1,6 +1,6 @@
 import './Projects.scss';
 import { useEffect, useState } from 'react';
-import { projects } from '../assets/projects';
+import { projects } from '../content/projects';
 import ProjectCard from './ProjectCard';
 
 //  list of available tags from project entries
@@ -25,6 +25,7 @@ function Projects() {
 
   return (
     <div className='projects-container'>
+      <h1>My Projects</h1>
       <div className='tag-list'>
         {allTags.map((tag, index) => (
           <div

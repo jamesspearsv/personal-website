@@ -3,6 +3,7 @@
 .project {
   display: flex;
   flex-direction: column;
+
   gap: 1rem;
   border: solid $color-dark 1px;
   border-radius: 10px;
@@ -33,7 +34,21 @@
 
   .project-tags {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+
+    .project-tag {
+      background-color: $color-orange;
+      padding: 0.5rem;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: $color-light;
+    }
+  }
+
+  a:has(.link-button) {
+    margin-top: auto;
   }
 
   .link-button {
@@ -48,6 +63,10 @@
 #app[data-theme='dark'] {
   .project {
     border-color: $color-light;
+
+    // .project-tag {
+    //   background-color: $color-orange;
+    // }
 
     .link:hover {
       text-decoration: underline;

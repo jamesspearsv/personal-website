@@ -5,18 +5,18 @@ function ProjectCard({ project }) {
   return (
     <div className='project'>
       <div className='project-heading'>
-        <a className='link' href={project.link}>
-          <h3>{project.name}</h3>
-        </a>
+        <h3>{project.name}</h3>
       </div>
       <hr className='divider' />
       <p>{project.desc}</p>
       <div className='project-tags'>
         {project.tags.map((tag, index) => (
-          <p key={index}>{tag}</p>
+          <div key={index} className='project-tag'>
+            {tag}
+          </div>
         ))}
       </div>
-      <a href=''>
+      <a href={project.github} target='_blank'>
         <div className='button link-button'>GitHub</div>
       </a>
     </div>
