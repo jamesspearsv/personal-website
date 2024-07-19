@@ -3,7 +3,7 @@ import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Experience from './pages/experience/Experience';
 import Projects from './pages/projects/Projects';
-import Error404 from './components/Error404';
+import Error from './components/Error';
 
 const routes = [
   {
@@ -15,7 +15,7 @@ const routes = [
       { path: 'experience', element: <Experience /> },
       { path: 'projects', element: <Projects /> },
     ],
-    errorElement: <Error404 />,
+    errorElement: <Error />,
   },
 ];
 
