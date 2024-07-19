@@ -1,6 +1,6 @@
 import './Projects.scss';
 import { useEffect, useState } from 'react';
-import { projects } from '../content/projects';
+import { projects } from '../../content/projects';
 import ProjectCard from './ProjectCard';
 
 //  list of available tags from project entries

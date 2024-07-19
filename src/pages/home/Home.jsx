@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Home.scss';
-import { LinkedIn, GitHub } from '../assets/connect-icons';
+import { LinkedIn, GitHub } from '../../assets/connect-icons';
 
 function Home() {
   return (

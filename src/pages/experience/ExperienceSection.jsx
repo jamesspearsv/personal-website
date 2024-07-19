@@ -1,4 +1,4 @@
-import { Chevron } from '../assets/chevron';
+import { Chevron } from '../../assets/chevron';
 import './ExperienceSection.scss';
 import ExperienceCard from './ExperienceCard';
 import PropTypes from 'prop-types';

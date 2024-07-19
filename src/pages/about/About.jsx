@@ -1,4 +1,4 @@
-import headshot from '../assets/james-headshot.png';
+import headshot from '../../assets/james-headshot.png';
 import './About.scss';
 
 function About() {

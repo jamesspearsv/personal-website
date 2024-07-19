@@ -1,4 +1,4 @@
-import { education, professional } from '../content/experince';
+import { education, professional } from '../../content/experince';
 import ExperienceSection from './ExperienceSection';
 import './Experience.scss';
 import { useState } from 'react';

@@ -1,7 +1,6 @@
-import { Outlet } from 'react-router-dom';
-import Nav from './components/Nav';
 import { useEffect, useState } from 'react';
 import './App.scss';
+import Layout from './components/Layout';
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(() => {
@@ -15,11 +14,8 @@ function App() {
   }, [isDarkTheme]);
 
   return (
-    <div id="app" data-theme={isDarkTheme ? 'dark' : 'light'}>
-      <Nav isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
-      <main>
-        <Outlet />
-      </main>
+    <div id='app' data-theme={isDarkTheme ? 'dark' : 'light'}>
+      <Layout isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
     </div>
   );
 }

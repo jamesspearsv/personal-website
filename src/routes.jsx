@@ -1,8 +1,9 @@
 import App from './App';
-import Home from './components/Home';
-import About from './components/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
+import Home from './pages/home/Home';
+import About from './pages/about/About';
+import Experience from './pages/experience/Experience';
+import Projects from './pages/projects/Projects';
+import Error404 from './components/Error404';
 
 const routes = [
   {
@@ -14,6 +15,7 @@ const routes = [
       { path: 'experience', element: <Experience /> },
       { path: 'projects', element: <Projects /> },
     ],
+    errorElement: <Error404 />,
   },
 ];
 
