@@ -3,6 +3,7 @@
 .project {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   gap: 1rem;
   border: solid $color-dark 1px;
@@ -47,26 +48,28 @@
     }
   }
 
-  a:has(.link-button) {
-    margin-top: auto;
-  }
+  .project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 
-  .link-button {
-    text-align: center;
-  }
+    a:has(.link-button) {
+      margin-top: auto;
+    }
 
-  .link-button:hover {
-    text-decoration: underline;
+    .link-button {
+      text-align: center;
+    }
+
+    .link-button:hover {
+      text-decoration: underline;
+    }
   }
 }
 
 #app[data-theme='dark'] {
   .project {
     border-color: $color-light;
-
-    // .project-tag {
-    //   background-color: $color-orange;
-    // }
 
     .link:hover {
       text-decoration: underline;
