@@ -34,8 +34,8 @@ export const projects = [
   {
     name: 'To-Do App',
     desc: "This is my solution to The Odin Project's Javascript course To-Do App project. This project is built using vanilla Javascript principles including modules and factory functions and web APIs including local storage.",
-    github: 'https://github.com/jamesspearsv/memory-game-top',
-    live: 'https://memory.jspears.me',
+    github: 'https://github.com/jamesspearsv/todo-list',
+    live: 'https://jamesspearsv.github.io/todo-list/',
     tags: ['Javascript', 'HTML & CSS', 'Webpack'],
   },
   {
@@ -48,8 +48,8 @@ export const projects = [
   {
     name: 'Tic Tac Toe Game',
     desc: "This is my solution the Odin Project's Javascript course Tic Tac Toe project. This project was built using fundamental Javascript principles including modules, functions, and factory functions.",
-    github: 'https://github.com/jamesspearsv/age-calculator',
-    live: 'https://jamesspearsv.github.io/age-calculator/',
+    github: 'https://github.com/jamesspearsv/tictactoe-project',
+    live: 'https://jamesspearsv.github.io/tictactoe-project/',
     tags: ['Javascript', 'HTML & CSS', 'Webpack'],
   },
 ];
