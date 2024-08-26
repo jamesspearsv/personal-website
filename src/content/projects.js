@@ -9,7 +9,7 @@ export const projects = [
     name: 'Personal Website',
     desc: "My personal website is a project in itself. This site was built using React, React Router, and other technologies using information learned from The Odin Project's React course",
     github: 'https://github.com/jamesspearsv/personal-website',
-    tags: ['React', 'Javascript', 'Sass'],
+    tags: ['React', 'Javascript', 'Sass', 'Vite'],
   },
   {
     name: 'LibStats',
@@ -18,18 +18,25 @@ export const projects = [
     tags: ['Python', 'Django', 'Docker', 'Bootstrap'],
   },
   {
+    name: 'Shopping Cart',
+    desc: "This is my solution to The Odin Project's React course shopping cart project. This project was built using React fundamentals including state management, data fetching with useEffect, routing with React-Router, and CSS modules",
+    github: 'https://github.com/jamesspearsv/shopping-cart-project',
+    live: 'https://shopping-cart-project-1di.pages.dev/',
+    tags: ['Javascript', 'React', 'Vite'],
+  },
+  {
     name: 'CV Builder',
     desc: "This is my solution to The Odin Project's React course CV Builder project. This project is built using basic React principles including state, components",
     github: 'https://github.com/jamesspearsv/cv-builder',
     live: 'https://cv.jspears.me',
-    tags: ['Javascript', 'React'],
+    tags: ['Javascript', 'React', 'Vite'],
   },
   {
     name: 'Memory Game',
     desc: "This is my solution to The Odin Project's React course Memory Game project. This project is built using React and demonstrates the useEffect hook in addition to other basic React principles.",
     github: 'https://github.com/jamesspearsv/memory-game-top',
     live: 'https://memory.jspears.me',
-    tags: ['Javascript', 'React'],
+    tags: ['Javascript', 'React', 'Vite'],
   },
   {
     name: 'To-Do App',
