@@ -15,7 +15,7 @@ export const projects = [
     name: 'LibStats',
     desc: 'LibStats is a basic tool to record and report reference interactions in a library setting. The app is built using NodeJS, Express, React, Vite, Docker, and other tools.',
     github: 'https://github.com/jamesspearsv/libstats-node',
-    tags: ['NodeJS', 'Express', 'React', 'Javascript', 'Fullstack'],
+    tags: ['NodeJS', 'Express', 'React', 'Javascript', 'Fullstack', 'Docker'],
   },
   {
     name: 'Shopping Cart',
