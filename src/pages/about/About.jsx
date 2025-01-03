@@ -17,7 +17,7 @@ function About() {
         <p>
           Hi! I&apos;m a public librarian, hobbist web developer, and full-time
           cat lover. Born and raised in East Tennessee, I currently live in wild
-          and wonderful West Virginia with my fiancee (who is also a librarian)
+          and wonderful West Virginia with my wife (who is also a librarian)
           and our two wonderful cats. I graduated from the University of
           Tennessee, Knoxville in 2020 and 2022 with a BA in History and an MS
           in Information Sciences respectively.
