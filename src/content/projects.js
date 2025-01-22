@@ -13,7 +13,7 @@ export const projects = [
   },
   {
     name: 'LibStats',
-    desc: 'LibStats is a basic tool to record and report reference interactions in a library setting. The app is built using NodeJS, Express, React, Vite, Docker, and other tools.',
+    desc: 'LibStats is a basic tool to record and report reference interactions in a library setting. The app is built using NodeJS, Express, React, Vite, Docker, and other tools. View a live demo below and login using the admin password "admin".',
     github: 'https://github.com/jamesspearsv/libstats-node',
     live: 'https://libstats.jspears.me',
     tags: ['NodeJS', 'Express', 'React', 'Javascript', 'Fullstack', 'Docker'],
