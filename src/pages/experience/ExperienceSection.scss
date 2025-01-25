@@ -17,6 +17,9 @@
   .section-content {
     display: flex;
     flex-direction: column;
+    height: auto;
+    transition: height 500ms ease-in-out;
+    overflow: hidden;
   }
 
   svg {
@@ -27,15 +30,10 @@
 .section.inactive {
   .section-content {
     height: 0;
-    overflow: hidden;
   }
 }
 
 .section.active {
-  .section-header {
-    border-bottom: solid 1px $color-dark;
-  }
-
   svg {
     transform: rotate(180deg);
   }

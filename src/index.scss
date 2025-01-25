@@ -2,6 +2,10 @@
 @import './global.scss';
 
 // global styles
+:root {
+  interpolate-size: allow-keywords;
+}
+
 body {
   font-family: $font-body;
   font-size: 18px;
