@@ -1,6 +1,4 @@
-@import '../../global.scss';
-
-.bio-container {
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,27 +9,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // background-color: $color-orange;
     height: fit-content;
     padding: 1rem;
     border-radius: 200px;
-
-    .headshot {
-      width: 100%;
-      height: auto;
-      border-radius: 200px;
-    }
-  }
-
-  .bio {
-    line-height: 1.5;
-    text-align: justify;
-    width: 70%;
   }
 }
 
-@media screen and (max-width: $mobile-break) {
-  .bio-container {
+.headshot {
+  width: 100%;
+  height: auto;
+  border-radius: 200px;
+}
+
+.bio {
+  line-height: 1.5;
+  text-align: justify;
+  width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
     flex-direction: column;
 
     div {

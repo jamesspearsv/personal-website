@@ -1,6 +1,4 @@
-@import '../../global.scss';
-
-.experience-container {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,12 +7,12 @@
   h1 {
     text-align: center;
   }
+}
 
-  button {
-    transition: transform 300ms ease-in-out;
-  }
+.resume {
+  transition: transform 300ms ease-in-out;
 
-  button:hover {
+  &:hover {
     transform: scale(1.1);
   }
 }
