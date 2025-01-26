@@ -1,8 +1,8 @@
-.home-container {
+.homeContainer {
   text-align: center;
 }
 
-.about-cta {
+.cta {
   transition: padding-right 250ms ease-in-out;
 
   &::after {
@@ -20,7 +20,7 @@
   }
 }
 
-.connect-links {
+.links {
   display: flex;
   justify-content: center;
   gap: 1rem;
