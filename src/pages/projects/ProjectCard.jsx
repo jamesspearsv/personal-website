@@ -1,28 +1,27 @@
 import PropTypes from 'prop-types';
 import styles from './ProjectCard.module.css';
+import clsx from 'clsx';
 
 function ProjectCard({ project }) {
   return (
-    <div className="project">
-      <div className="project-heading">
-        <h3>{project.name}</h3>
-      </div>
+    <div className={styles.project}>
+      <h3 className={styles.heading}>{project.name}</h3>
       <hr className="divider" />
       <p>{project.desc}</p>
-      <div className="project-tags">
+      <div className={styles.tags}>
         {project.tags.map((tag, index) => (
-          <div key={index} className="project-tag">
+          <div key={index} className={styles.tag}>
             {tag}
           </div>
         ))}
       </div>
-      <div className="project-links">
+      <div className={styles.links}>
         <a href={project.github} target="_blank">
-          <div className="button link-button">View code</div>
+          <div className={clsx('button', [styles.link])}>View code</div>
         </a>
         {project.live && (
           <a href={project.live} target="_blank">
-            <div className="button link-button">Live preview</div>
+            <div className={clsx('button', [styles.link])}>Live preview</div>
           </a>
         )}
       </div>

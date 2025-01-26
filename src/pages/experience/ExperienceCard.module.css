@@ -3,17 +3,17 @@
   flex-direction: column;
   gap: 0.5rem;
   padding: 1.5rem;
+}
 
-  .title {
-    margin: 0;
-    padding: 0;
-  }
+.title {
+  margin: 0;
+  padding: 0;
+}
 
-  .subtitle {
-    font-style: italic;
-  }
+.subtitle {
+  font-style: italic;
+}
 
-  .content {
-    margin: 0;
-  }
+.content {
+  margin: 0;
 }

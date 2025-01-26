@@ -10,18 +10,6 @@
   max-width: 300px;
   box-shadow: 3px 3px;
 
-  .project-heading {
-    h3 {
-      margin: 0;
-      padding: 0;
-    }
-
-    .link:hover {
-      text-decoration: underline;
-      color: var(--color-orange);
-    }
-  }
-
   hr {
     margin: 0;
   }
@@ -30,42 +18,47 @@
     margin: 0;
     padding: 0;
   }
+}
 
-  .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+.heading {
+  margin: 0;
+  padding: 0;
+}
 
-    .project-tag {
-      background-color: var(--color-orange);
-      padding: 0.5rem;
-      border-radius: 100px;
-      font-size: 0.8rem;
-      font-weight: bold;
-      color: var(--color-light);
-    }
-  }
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
-  .project-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.tag {
+  background-color: var(--color-orange);
+  padding: 0.5rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--color-light);
+}
 
-    a:has(.link-button) {
-      margin-top: auto;
-    }
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 
-    .link-button {
-      text-align: center;
-    }
-
-    .link-button:hover {
-      text-decoration: underline;
-    }
+  a:has(.link) {
+    margin-top: auto;
   }
 }
 
-#app[data-theme='dark'] {
+.link {
+  text-align: center;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* #app[data-theme='dark'] {
   .project {
     border-color: var(--color-light);
 
@@ -74,4 +67,4 @@
       color: var(--color-blue);
     }
   }
-}
+} */

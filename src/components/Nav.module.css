@@ -4,48 +4,48 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+}
 
-  .mobileMenu {
-    display: none;
+.mobileMenu {
+  display: none;
+}
+
+.menuContainer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  padding: 0 1rem;
+
+  .navHeading {
+    font-size: 1.25rem;
+    margin-right: auto;
+    font-weight: 400;
   }
 
-  .menuContainer {
+  ul {
     display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 1rem;
-    height: 100%;
-    padding: 0 1rem;
-
-    .navHeading {
-      font-size: 1.25rem;
-      margin-right: auto;
-      font-weight: 400;
-    }
-
-    ul {
-      display: flex;
-      flex-direction: row;
-      padding: 0;
-      gap: 1.5rem;
-      list-style: none;
-    }
-  }
-
-  .themeToggler {
-    background-color: var(--color-dark);
-    border: none;
-    border-radius: 5px;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    flex-direction: row;
+    padding: 0;
+    gap: 1.5rem;
+    list-style: none;
   }
 }
 
+.themeToggler {
+  background-color: var(--color-dark);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
 /* Dark theme styles */
-#app[data-theme='dark'] {
+/* #app[data-theme='dark'] {
   .nav {
     border-bottom: 2px solid var(--color-light);
     background-color: var(--color-dark);
@@ -54,8 +54,7 @@
         background-color: var(--color-light);
       }
     }
-  }
-}
+  } */
 
 @media screen and (max-width: 768px) {
   .nav {
@@ -65,77 +64,77 @@
     button {
       scale: 1.25;
     }
+  }
 
-    .mobileMenu {
-      height: 100%;
+  .mobileMenu {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+
+    button {
+      background-color: var(--color-dark);
+      color: var(--color-light);
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      padding: 0 1rem;
-
-      .mobileHeading {
-        font-size: 1.25rem;
-      }
-
-      button {
-        background-color: var(--color-dark);
-        color: var(--color-light);
-        border: none;
-        border-radius: 5px;
-        padding: 0.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      button svg {
-        transition: transform 500ms ease-in-out;
-      }
-
-      button.open svg {
-        transform: rotate(180deg);
-      }
     }
 
-    .menuContainer {
-      position: absolute;
-      background-color: var(--color-light);
-      padding: 0;
-      width: 100dvw;
-      transition: height 500ms ease-in-out;
-      flex-direction: column;
-      justify-content: start;
-      overflow: hidden;
-
-      .navHeading {
-        display: none;
-      }
-
-      ul,
-      .themeToggler {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        transition: opacity 500ms ease-in-out;
-      }
-
-      ul {
-        font-size: 1.5rem;
-      }
+    button svg {
+      transition: transform 500ms ease-in-out;
     }
 
-    .menuContainer.closed {
-      height: 0px;
-
-      ul,
-      .themeToggler {
-        opacity: 0;
-      }
+    button.open svg {
+      transform: rotate(180deg);
     }
+  }
 
+  .mobileHeading {
+    font-size: 1.25rem;
+  }
+
+  .menuContainer {
+    position: absolute;
+    background-color: var(--color-light);
+    padding: 0;
+    width: 100dvw;
+    transition: height 500ms ease-in-out;
+    flex-direction: column;
+    justify-content: start;
+    overflow: hidden;
+
+    ul,
     .themeToggler {
-      padding: 0.5rem 2rem;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      transition: opacity 500ms ease-in-out;
     }
+
+    ul {
+      font-size: 1.5rem;
+    }
+  }
+
+  .navHeading {
+    display: none;
+  }
+
+  .menuContainer.closed {
+    height: 0px;
+
+    ul,
+    .themeToggler {
+      opacity: 0;
+    }
+  }
+
+  .themeToggler {
+    padding: 0.5rem 2rem;
   }
 
   /*   Mobile dark theme styles */
@@ -154,9 +153,4 @@
     }
   }
 } */
-
-  /* #app[data-theme='dark'] {
-  .nav {
-    background-color: var(--color-dark);
-  } */
 }

@@ -30,11 +30,11 @@ function Projects() {
       <div className={styles.tags}>
         {allTags.map((tag, index) => (
           <div
-            className={{
-              [styles.button]: true,
-              [styles.tag]: true,
-              [styles.active]: activeTag === tag,
-            }}
+            className={clsx(
+              'button',
+              [styles.tag],
+              activeTag === tag && [styles.active]
+            )}
             key={index}
             id={tag}
             onClick={handleClick}

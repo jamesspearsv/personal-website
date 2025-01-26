@@ -3,15 +3,16 @@ import styles from './About.module.css';
 
 function About() {
   return (
-    <div className="bio-container">
+    <div className={styles.container}>
       <div>
+        {/* todo: improve img optimization */}
         <img
           src={headshot}
           alt="Headshot of James in a salmon colored polo"
-          className="headshot"
+          className={styles.headshot}
         />
       </div>
-      <section className="bio">
+      <section className={styles.bio}>
         <h1>All About Me!</h1>
         <hr className="divider" />
         <p>

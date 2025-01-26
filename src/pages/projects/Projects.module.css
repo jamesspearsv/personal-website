@@ -2,35 +2,35 @@
   h1 {
     text-align: center;
   }
+}
 
-  .tags {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
+.tags {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
 
-    .tag {
-      border-radius: 25px;
-      transition-property: background-color scale;
-      transition-duration: 300ms;
-      transition-timing-function: ease-in-out;
-    }
+.tag {
+  border-radius: 25px;
+  transition-property: background-color scale;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
 
-    .tag:hover {
-      scale: 1.2;
-    }
+.tag:hover {
+  scale: 1.2;
+}
 
-    .tag.active {
-      background-color: var(--color-orange);
-    }
-  }
+.tag.active {
+  background-color: var(--color-orange);
+}
 
-  .gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
