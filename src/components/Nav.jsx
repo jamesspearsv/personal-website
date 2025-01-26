@@ -1,10 +1,11 @@
 import { Link, NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import './Nav.scss';
+import styles from './Nav.module.css';
 import darkIcon from '../assets/dark-icon.svg';
 import lightIcon from '../assets/light-icon.svg';
 import { Chevron } from '../assets/chevron';
 import { useState } from 'react';
+import clsx from 'clsx';
 
 function Nav({ isDarkTheme, setIsDarkTheme }) {
   const [navClosed, setNavClosed] = useState(true);
@@ -25,13 +26,16 @@ function Nav({ isDarkTheme, setIsDarkTheme }) {
   ];
 
   return (
-    <nav style={{ height: `${navHeight}px` }}>
-      <div className='mobile-menu'>
-        <Link className='mobile-heading' to='/' onClick={closeNav}>
+    <nav style={{ height: `${navHeight}px` }} className={styles.nav}>
+      <div className={styles.mobileMenu}>
+        <Link className={styles.mobileHeading} to="/" onClick={closeNav}>
           James Spears, V
         </Link>
         <button
-          className={navClosed ? 'closed' : 'open'}
+          className={clsx({
+            [styles.closed]: navClosed,
+            [styles.open]: !navClosed,
+          })}
           onClick={() => {
             setNavClosed((navClosed) => !navClosed);
           }}
@@ -40,10 +44,15 @@ function Nav({ isDarkTheme, setIsDarkTheme }) {
         </button>
       </div>
       <div
-        className={'menu-container ' + (navClosed ? 'closed' : 'open')}
-        style={{ height: navClosed ? '' : menuHeight + 'px' }}
+        className={clsx([styles.menuContainer], {
+          [styles.closed]: navClosed,
+        })}
+        /* the height transition is very hacky right now. 
+        Waiting for better intrinsic keyword support to improve height transition 
+        */
+        style={{ height: !navClosed ? menuHeight + 'px' : '' }}
       >
-        <Link className='nav-heading'>James Spears, V</Link>
+        <Link className={styles.navHeading}>James Spears, V</Link>
         <ul>
           {navItems.map((item, index) => (
             <li key={index}>
@@ -54,14 +63,14 @@ function Nav({ isDarkTheme, setIsDarkTheme }) {
           ))}
         </ul>
         <div>
-          <button
-            className='theme-toggler'
+          {/* <button
+            className={styles.themeToggler}
             onClick={() => {
               setIsDarkTheme((isDarkTheme) => !isDarkTheme);
             }}
           >
-            <img src={isDarkTheme ? lightIcon : darkIcon} alt='' srcset='' />
-          </button>
+            <img src={isDarkTheme ? lightIcon : darkIcon} />
+          </button> */}
         </div>
       </div>
     </nav>

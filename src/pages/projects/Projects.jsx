@@ -1,7 +1,8 @@
-import './Projects.scss';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { projects } from '../../content/projects';
 import ProjectCard from './ProjectCard';
+import styles from './Projects.module.css';
+import clsx from 'clsx';
 
 //  list of available tags from project entries
 const allTags = [];
@@ -24,12 +25,16 @@ function Projects() {
   }
 
   return (
-    <div className='projects-container'>
+    <div className={styles.container}>
       <h1>My Projects</h1>
-      <div className='tag-list'>
+      <div className={styles.tags}>
         {allTags.map((tag, index) => (
           <div
-            className={`button tag ${activeTag === tag ? 'active' : ''}`}
+            className={{
+              [styles.button]: true,
+              [styles.tag]: true,
+              [styles.active]: activeTag === tag,
+            }}
             key={index}
             id={tag}
             onClick={handleClick}
@@ -38,7 +43,7 @@ function Projects() {
           </div>
         ))}
       </div>
-      <div className='project-gallery'>
+      <div className={styles.gallery}>
         {projects.map((project, index) => {
           const filtered =
             activeTag === null || project.tags.includes(activeTag);

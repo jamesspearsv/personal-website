@@ -1,11 +1,9 @@
-@import '../../global.scss';
-
 .home-container {
   text-align: center;
 }
 
 .about-cta {
-  //   transition: padding-right 250ms ease-in-out;
+  transition: padding-right 250ms ease-in-out;
 
   &::after {
     content: '->';
@@ -33,6 +31,6 @@
   }
 
   svg:hover {
-    color: $color-blue;
+    color: var(--color-blue);
   }
 }

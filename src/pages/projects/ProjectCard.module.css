@@ -1,12 +1,10 @@
-@import '../../global.scss';
-
 .project {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   gap: 1rem;
-  border: solid $color-dark 1px;
+  border: solid var(--color-dark) 1px;
   border-radius: 10px;
   padding: 1.5rem;
   max-width: 300px;
@@ -20,7 +18,7 @@
 
     .link:hover {
       text-decoration: underline;
-      color: $color-orange;
+      color: var(--color-orange);
     }
   }
 
@@ -39,12 +37,12 @@
     gap: 1rem;
 
     .project-tag {
-      background-color: $color-orange;
+      background-color: var(--color-orange);
       padding: 0.5rem;
       border-radius: 100px;
       font-size: 0.8rem;
       font-weight: bold;
-      color: $color-light;
+      color: var(--color-light);
     }
   }
 
@@ -69,11 +67,11 @@
 
 #app[data-theme='dark'] {
   .project {
-    border-color: $color-light;
+    border-color: var(--color-light);
 
     .link:hover {
       text-decoration: underline;
-      color: $color-blue;
+      color: var(--color-blue);
     }
   }
 }

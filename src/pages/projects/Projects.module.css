@@ -1,11 +1,9 @@
-@import '../../global.scss';
-
-.projects-container {
+.container {
   h1 {
     text-align: center;
   }
 
-  .tag-list {
+  .tags {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
@@ -24,11 +22,11 @@
     }
 
     .tag.active {
-      background-color: $color-orange;
+      background-color: var(--color-orange);
     }
   }
 
-  .project-gallery {
+  .gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

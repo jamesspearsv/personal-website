@@ -1,11 +1,11 @@
-main {
+.main {
   padding: 2rem;
   max-width: 1100px;
   margin: auto;
 }
 
 @media screen and (max-width: 768px) {
-  main {
+  .main {
     width: 95%;
     padding: 2rem 0;
   }

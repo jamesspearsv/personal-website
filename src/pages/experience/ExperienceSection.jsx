@@ -1,7 +1,7 @@
 import { Chevron } from '../../assets/chevron';
-import './ExperienceSection.scss';
 import ExperienceCard from './ExperienceCard';
 import PropTypes from 'prop-types';
+import styles from './ExperienceSection.module.css';
 
 function ExperienceSection({
   activeSection,
@@ -21,11 +21,11 @@ function ExperienceSection({
       id={id}
       className={`section ${activeSection === id ? 'active' : 'inactive'}`}
     >
-      <div className='section-header' onClick={handelClick}>
+      <div className="section-header" onClick={handelClick}>
         <h2>{title}</h2>
         {Chevron}
       </div>
-      <div className='section-content'>
+      <div className="section-content">
         {section.map((entry, index) => (
           <ExperienceCard key={index} entry={entry} />
         ))}

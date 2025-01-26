@@ -1,8 +1,6 @@
-@import '../../global.scss';
-
 .section {
   width: 60%;
-  border: solid 1px $color-dark;
+  border: solid 1px var(--color-dark);
   border-radius: 10px;
   box-shadow: 3px 3px;
 
@@ -41,17 +39,17 @@
 
 #app[data-theme='dark'] {
   .section {
-    border-color: $color-light;
+    border-color: var(--color-light);
   }
 
   .section.active {
     .section-header {
-      border-bottom: solid 1px $color-light;
+      border-bottom: solid 1px var(--color-dark);
     }
   }
 }
 
-@media screen and (max-width: $mobile-break) {
+@media screen and (max-width: var(--mobile-break)) {
   .section {
     width: 90%;
   }

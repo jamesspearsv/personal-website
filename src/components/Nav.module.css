@@ -1,17 +1,15 @@
-@import '../global.scss';
-
-nav {
-  background-color: $color-light;
-  border-bottom: 1px solid $color-dark;
+.nav {
+  background-color: var(--color-light);
+  border-bottom: 1px solid var(--color-dark);
   position: sticky;
   top: 0;
   z-index: 1000;
 
-  .mobile-menu {
+  .mobileMenu {
     display: none;
   }
 
-  .menu-container {
+  .menuContainer {
     display: flex;
     justify-content: end;
     align-items: center;
@@ -19,7 +17,7 @@ nav {
     height: 100%;
     padding: 0 1rem;
 
-    .nav-heading {
+    .navHeading {
       font-size: 1.25rem;
       margin-right: auto;
       font-weight: 400;
@@ -31,15 +29,11 @@ nav {
       padding: 0;
       gap: 1.5rem;
       list-style: none;
-
-      a.active {
-        color: $color-orange;
-      }
     }
   }
 
-  .theme-toggler {
-    background-color: $color-dark;
+  .themeToggler {
+    background-color: var(--color-dark);
     border: none;
     border-radius: 5px;
     padding: 0.5rem;
@@ -50,21 +44,21 @@ nav {
   }
 }
 
-// Dark theme styles
+/* Dark theme styles */
 #app[data-theme='dark'] {
-  nav {
-    border-bottom: 2px solid $color-light;
-
-    .menu-container {
-      .theme-toggler {
-        background-color: $color-light;
+  .nav {
+    border-bottom: 2px solid var(--color-light);
+    background-color: var(--color-dark);
+    .menuContainer {
+      .themeToggler {
+        background-color: var(--color-light);
       }
     }
   }
 }
 
-@media screen and (max-width: $mobile-break) {
-  nav {
+@media screen and (max-width: 768px) {
+  .nav {
     flex-direction: column;
     height: 65px;
 
@@ -72,20 +66,20 @@ nav {
       scale: 1.25;
     }
 
-    .mobile-menu {
+    .mobileMenu {
       height: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 0 1rem;
 
-      .mobile-heading {
+      .mobileHeading {
         font-size: 1.25rem;
       }
 
       button {
-        background-color: $color-dark;
-        color: $color-light;
+        background-color: var(--color-dark);
+        color: var(--color-light);
         border: none;
         border-radius: 5px;
         padding: 0.5rem;
@@ -103,22 +97,22 @@ nav {
       }
     }
 
-    .menu-container {
+    .menuContainer {
       position: absolute;
-      background-color: $color-light;
+      background-color: var(--color-light);
       padding: 0;
       width: 100dvw;
       transition: height 500ms ease-in-out;
-
       flex-direction: column;
       justify-content: start;
+      overflow: hidden;
 
-      .nav-heading {
+      .navHeading {
         display: none;
       }
 
       ul,
-      .theme-toggler {
+      .themeToggler {
         width: 100%;
         flex-direction: column;
         align-items: center;
@@ -130,40 +124,39 @@ nav {
       }
     }
 
-    .menu-container.closed {
-      overflow: hidden;
+    .menuContainer.closed {
       height: 0px;
 
       ul,
-      .theme-toggler {
+      .themeToggler {
         opacity: 0;
       }
     }
 
-    .theme-toggler {
+    .themeToggler {
       padding: 0.5rem 2rem;
     }
   }
 
-  //  Mobile dark theme styles
-  #app[data-theme='dark'] {
-    nav {
-      .mobile-menu {
+  /*   Mobile dark theme styles */
+  /* #app[data-theme='dark'] {
+    .nav {
+      .mobileMenu {
         button {
-          background-color: $color-light;
-          color: $color-dark;
+          background-color: var(--color-light);
+          color: var(--color-dark);
         }
       }
 
-      .menu-container {
-        background-color: $color-dark;
+      .menuContainer {
+        background-color: var(--color-dark);
       }
     }
   }
-}
+} */
 
-#app[data-theme='dark'] {
-  nav {
-    background-color: $color-dark;
-  }
+  /* #app[data-theme='dark'] {
+  .nav {
+    background-color: var(--color-dark);
+  } */
 }

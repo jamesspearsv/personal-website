@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import './ProjectCard.scss';
+import styles from './ProjectCard.module.css';
 
 function ProjectCard({ project }) {
   return (

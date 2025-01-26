@@ -1,5 +1,3 @@
-@import '../../global.scss';
-
 .bio-container {
   display: flex;
   justify-content: space-between;
@@ -11,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // background-color: $color-orange;
+    background-color: var(--color-orange);
     height: fit-content;
     padding: 1rem;
     border-radius: 200px;
@@ -30,7 +28,7 @@
   }
 }
 
-@media screen and (max-width: $mobile-break) {
+@media screen and (max-width: var(--mobile-break)) {
   .bio-container {
     flex-direction: column;
 
