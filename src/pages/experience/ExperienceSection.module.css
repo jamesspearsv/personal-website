@@ -5,7 +5,7 @@
   box-shadow: 3px 3px;
 
   svg {
-    transition: transform 200ms ease-in-out;
+    transition: transform 500ms ease-in-out;
   }
 }
 
@@ -13,10 +13,6 @@
   svg {
     transform: rotate(180deg);
   }
-}
-
-.section.inactive .content {
-  height: 0;
 }
 
 .header {
@@ -31,8 +27,16 @@
   display: flex;
   flex-direction: column;
   height: auto;
-  transition: height 500ms ease-in-out;
+  transition-property: height, border-top;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
   overflow: hidden;
+  border-top: solid 1px var(--color-dark);
+}
+
+.section.inactive .content {
+  height: 0;
+  border-top: solid 1px rgba(0, 0, 0, 0);
 }
 
 @media screen and (max-width: 768px) {
