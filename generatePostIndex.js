@@ -1,57 +1,53 @@
-/**
- * Prebuild script to generate a list of markdown files
- * contained in `/public/posts` at build time.
- */
-
+// Script to generate index of markdown files in `/public/posts` at build time
 import fs from 'fs';
-const __publicdir = './public';
-const __postdir = './public/posts';
+import { parseMarkdownHeader } from './src/lib/markdown';
 
-// todo: remove previous index file
+export function generatePostIndex() {
+  const __assets = './src/assets';
+  const __postdir = './public/posts';
 
-const index = [];
+  const index = [];
+  try {
+    console.log('Building blog posts index...');
+    const posts = fs.readdirSync(__postdir);
+    // console.log('posts -- ', posts);
 
-try {
-  const posts = fs.readdirSync(__postdir);
-  console.log('posts -- ', posts);
+    posts.forEach((post) => {
+      // Skip non-markdown files.
+      if (!post.match(/[A-Za-z0-9]+\.md/)) return;
 
-  console.log('METADATA');
-  posts.forEach((post) => {
-    /* skip non-markdown files.
-     * Improve this to handle complex file names
-     * i.e 'post-file.md'
-     */
-    if (!post.match(/[A-Za-z0-9]+\.md/)) return;
+      // read file contents
+      const markdown = fs.readFileSync(__postdir + '/' + post, 'utf-8');
 
-    // read file contents
-    const markdown = fs.readFileSync(__postdir + '/' + post, 'utf-8');
+      const meta = parseMarkdownHeader(markdown, 'header');
 
-    // extract metadata header
-    const content = markdown.split('---');
-    const meta = content[1];
-    meta.trim();
-    console.log(meta);
+      // split metadata rows on newlines
+      const row = meta.split(/\n/).filter((item) => item !== '');
+      // console.log(row);
 
-    // split metadata rows
-    const data = meta.split(/\n/).filter((item) => item != '');
+      // assign post slug to entry object
+      const entry = {
+        slug: post.split('.')[0],
+      };
 
-    // assign post slug to entry object
-    const entry = {
-      slug: post.split('.')[0],
-    };
+      // extract row key and value
+      row.forEach((element) => {
+        const r = element.split(':');
+        entry[r[0].trim()] = r[1].trim();
+      });
 
-    // extract row key and value
-    data.forEach((element) => {
-      const row = element.split(':');
-      entry[row[0].trim()] = row[1].trim();
+      // console.log(entry);
+      index.push(entry);
     });
 
-    index.push(entry);
-  });
-} catch (error) {
-  console.error(error);
+    // sort according to date
+    index.sort((a, b) => new Date(a.date) + new Date(b.date));
+
+    // write index to json file
+    fs.writeFileSync(__assets + '/postIndex.json', JSON.stringify(index));
+
+    console.log('Done building blog posts index successfully!');
+  } catch (error) {
+    console.error(error);
+  }
 }
-
-console.log(index);
-
-//todo: write file to `/public`

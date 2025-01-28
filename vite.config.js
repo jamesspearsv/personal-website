@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { generatePostIndex } from './generatePostIndex';
 
 // Create the equivalent of __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -15,5 +16,13 @@ export default defineConfig({
       '@lib': path.resolve(__dirname, 'src/lib'),
     },
   },
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: 'build-script',
+      buildStart() {
+        generatePostIndex();
+      },
+    },
+  ],
 });
