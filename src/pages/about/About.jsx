@@ -1,16 +1,26 @@
+import { Suspense } from 'react';
 import headshot from '../../assets/james-headshot.png';
 import styles from './About.module.css';
+import { useImage } from 'react-image';
+
+function Img() {
+  const { src } = useImage({ srcList: headshot });
+  return (
+    <img
+      src={src}
+      alt="Headshot of James in a salmon colored polo"
+      className={styles.headshot}
+    />
+  );
+}
 
 function About() {
   return (
     <div className={styles.container}>
       <div>
-        {/* todo: improve img optimization */}
-        <img
-          src={headshot}
-          alt="Headshot of James in a salmon colored polo"
-          className={styles.headshot}
-        />
+        <Suspense>
+          <Img />
+        </Suspense>
       </div>
       <section className={styles.bio}>
         <h1>All About Me!</h1>
